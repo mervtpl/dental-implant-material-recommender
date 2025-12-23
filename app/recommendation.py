@@ -91,10 +91,10 @@ SPECIAL CLINICAL CONDITIONS (FROM LITERATURE)
 TASK
 ----
 Using the literature tables above:
-1. Compare Titanium, Zirconia, Ceramic, and Polymer-based composites.
-2. Explain how the selected parameters influence material choice.
+1. use just the providen links in the tables.
+2. Explain how the selected parameters influence material choice briefly.
 3. Consider special clinical conditions only if they are present.
-4. Provide ONE final recommended material with clear justification.
+4. Provide ONE final recommended material with clear justification at the beginning.
 """
 
     return ask_gemini(prompt)
