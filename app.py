@@ -101,8 +101,7 @@ selected_parameters = st.multiselect(
 if st.button("Get Recommendation"):
     if age is None:
         st.error("Please enter a valid age.")
-    elif len(selected_parameters) == 0:
-        st.error("Please select at least one parameter.")
+   
     else:
         patient_info = {
             "age": age,
