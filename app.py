@@ -34,6 +34,8 @@ parameter_options = (
     .tolist()
 )
 
+parameter_options.append("I don't know")
+
 # =========================
 # PATIENT INFORMATION
 # =========================
@@ -42,20 +44,13 @@ st.subheader("Patient Information")
 age_input = st.text_input("Age", placeholder="Enter age (e.g., 35)")
 age = int(age_input) if age_input.isdigit() else None
 
-bone_type = st.selectbox(
-    "Bone Type",
-    ["I don't know", "Type I", "Type II", "Type III", "Type IV"]
-)
 
 jaw_region = st.selectbox(
     "Jaw Region",
     ["Mandible (Lower Jaw)", "Maxilla (Upper Jaw)"]
 )
 
-bone_density = st.selectbox(
-    "Bone Density",
-    ["I don't know", "Low", "Medium", "High"]
-)
+
 
 allergy = st.selectbox(
     "Metal Sensitivity / Allergy",
@@ -91,7 +86,7 @@ bruxism = st.selectbox("Bruxism", ["No", "Yes"])
 st.subheader("Literature-Based Parameter Priorities")
 
 selected_parameters = st.multiselect(
-    "Select important material parameters",
+    "Select important material parameters(Optional)",
     parameter_options
 )
 
@@ -101,13 +96,11 @@ selected_parameters = st.multiselect(
 if st.button("Get Recommendation"):
     if age is None:
         st.error("Please enter a valid age.")
-   
+
     else:
         patient_info = {
             "age": age,
-            "bone_type": bone_type,
             "jaw_region": jaw_region,
-            "bone_density": bone_density,
             "smoking": smoking,
             "allergy": allergy,
             "aesthetic": aesthetic,
