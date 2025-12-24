@@ -52,7 +52,7 @@ def generate_recommendation(patient_info, special_conditions, selected_parameter
     # NORMALIZE SPECIAL CONDITIONS (TEXT MODE)
     # =========================
     special_df_clean = special_df.fillna("").applymap(normalize_text)
-    special_table_text = special_df_clean.to_markdown(index=False)
+    special_table_text = special_df_clean.to_string(index=False)
 
     # =========================
     # GEMINI PROMPT
