@@ -46,7 +46,7 @@ def generate_recommendation(patient_info, special_conditions, selected_parameter
         material_df["Parametre_clean"].isin(selected_parameters_clean)
     ]
 
-    material_table_text = material_subset.fillna("").to_markdown(index=False)
+    material_table_text = material_subset.fillna("").to_string(index=False)
 
     # =========================
     # NORMALIZE SPECIAL CONDITIONS (TEXT MODE)

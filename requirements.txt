@@ -3,4 +3,3 @@ google-genai
 pandas
 openpyxl
 python-dotenv
-tabulate
