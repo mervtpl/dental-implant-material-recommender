@@ -3,11 +3,12 @@ import pandas as pd
 from recommendation import generate_recommendation
 from report import generate_txt_report
 
-st.title("AI Dental Implant Material Selector")
+st.title("AI-Assisted Biomimetric Dental Implant Material Selector")
 
 # =========================
 # LOAD PARAMETERS FROM EXCEL
 # =========================
+
 EXCEL_PATH = "Literature_Survey.xlsx"
 
 def normalize_text(text):
